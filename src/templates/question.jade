@@ -1,0 +1,17 @@
+.quiz-question.js-quizQuestion
+  .quiz-question_title= title
+
+    .quiz-question_number
+      =number
+      | /
+      span=length
+
+  img.quiz-question_pic(src=pic)
+
+  ul.quiz-answers.js-quizAnswers
+    each variant in variants
+      li.quiz-answers_item.js-quizAnswer
+        label
+          .checkbox.js-quizCheckbox= variant.title
+
+  .quiz-question_confirm.js-quizNext.is-disabled Продолжить

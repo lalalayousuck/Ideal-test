@@ -1,0 +1,222 @@
+@import 'modules/reset';
+@import 'modules/tune';
+@import 'modules/icons';
+@import 'modules/mixins';
+@import 'sprite';
+@import 'base/fonts';
+@import 'base/header';
+@import 'base/video-bg';
+@import 'base/btn';
+@import 'base/share-btn';
+@import 'project/quiz';
+@import 'project/quiz-nav';
+@import 'project/question';
+@import 'project/result';
+@import 'project/credits';
+@import 'project/posts';
+
+body {
+  margin: 0;
+  color: black;
+}
+
+.header {
+  z-index: 2;
+}
+
+.p-header {
+  height: 75px;
+  box-shadow: 5px 2px 5px #f4f4f4;
+}
+
+.p-header_logo,
+.p-header_link {
+  float: left;
+  margin-right: 15px;
+  line-height: 85px;
+}
+
+.br {
+  height: 20px;
+}
+
+.p-header_logo {
+  margin: 0 25px 0 0;
+}
+
+.p-header_link a:hover {
+  color: #3ea971;
+}
+
+.p-hero {
+  margin-top: 25px;
+  padding-bottom: 50px;
+  min-height: 620px;
+  text-align: center;
+  background-image: url("http://cdn.kitchenmag.ru/uploads/upload/file/1/olive-2.jpg");
+  background-position-x: center;
+  background-position-y: 86px;
+  background-repeat: no-repeat;
+
+  &.test {
+    margin-top: 142px;
+    background-position-y: -100px;
+  }
+}
+
+.p-hero_container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.p-hero_menu {
+  display: block;
+  position: absolute;
+  top: 138px;
+  left: 50%;
+  margin-left: -143px;
+  box-sizing: content-box;
+
+  li {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 2px solid #74c584;
+    color: #74c584;
+    font-size: 14px;
+
+    &:first-child {
+      border-radius: 15px 0 0 15px;
+    }
+
+    &:nth-child(2) {
+      border-width: 2px 0 2px 0;
+    }
+
+    &:last-child {
+      border-radius: 0 15px 15px 0;
+    }
+
+    &.is-active {
+      background-color: #74c584;
+      color: white;
+    }
+  }
+}
+
+.p-hero_content {
+  position: relative;
+  max-width: 960px;
+  min-width: 300px;
+  margin-top: 177px;
+  margin-left: 40%;
+  padding: 0 0 0 4px;
+  text-align: left;
+
+  .p-hero-bottle {
+    position: absolute;
+    top: 140px;
+    left: -260px;
+  }
+
+  .social {
+    position: relative;
+    display: inline-block;
+    margin: 40px 17px 0 0;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: #514d21;
+
+    &:before {
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+}
+
+.p-hero_title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+
+  a {
+    @include icon(ideal_logo);
+    position: absolute;
+    top: -10px;
+    left: 104px;
+  }
+}
+
+.p-hero_text {
+  max-width: 527px;
+  margin: 30px 0 0;
+  line-height: 1.5;
+  font-size: 16px;
+
+  span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.p-hero_social__web:before {
+  @include icon(ideal_social__web);
+  top: 8px;
+  left: -3px;
+}
+
+.p-hero_social__vk:before {
+  @include icon(ideal_social__vk);
+  top: 10px;
+  left: 5px;
+}
+
+.p-hero_social__fb:before {
+  @include icon(ideal_social__fb);
+  top: 6px;
+  left: 10px;
+}
+
+.p-hero_social__inst:before {
+  @include icon(ideal_social__inst);
+  top: 7px;
+  left: 7px;
+}
+
+@media all and (max-width: 960px) {
+  .p-hero_container {
+    width: 100%;
+  }
+
+  .p-hero_text {
+    padding-right: 30px;
+  }
+}
+
+@media all and (max-width: 736px) {
+  .p-hero_container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .p-hero_content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .p-header_logo {
+    width: 40%;
+  }
+
+  .p-hero_content .p-hero-bottle {
+    position: fixed;
+    top: 30%;
+    width: 27%;
+    left: 72%;
+    right: 0;
+  }
+
+  .p-hero_text {
+    padding-right: 100px;
+  }
+}

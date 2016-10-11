@@ -1,0 +1,20 @@
+.quiz
+  .quiz-result Ваш результат
+  //- .quiz-result_score
+  //-   span
+  //-   = length*2
+  img.quiz-question_pic(src=pic)
+  .quiz_desc= description
+  .quiz-social
+    .quiz-social_title Поделиться результатом
+    .share-btn.share-btn__fb(data-component='shareBtn', data-title=title, data-description=description, data-type="fb", data-url=url, data-image=image)
+      | Like
+      .share-btn_counter.js-shareBtnCounter
+    .share-btn.share-btn__ok(data-component='shareBtn', data-type="ok", , data-title=title, data-description=description, data-url=url, data-image=image)
+      | Like
+      .share-btn_counter.js-shareBtnCounter
+    .share-btn.share-btn__vk(data-component='shareBtn', data-type="vk", data-title=title, data-description=description, data-url=url, data-image=image)
+      | Like
+      .share-btn_counter.js-shareBtnCounter
+    br
+    a.result_restart(href="/") Пройти тест заново

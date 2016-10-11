@@ -1,0 +1,15 @@
+extends ./templates/layout.jade
+
+block title
+  title Взгляд в корзинку: как хорошо вы выбираете продукты питания?
+block content
+  .p-hero.test
+    .p-hero-container
+      ul.p-hero_menu
+        li
+          a(href="http://kitchenmag.ru/promo/Ideal") Все статьи
+        li.is-active
+          a Тест
+        li
+          a(href="ideal.kitchenmag.ru") О бренде
+      div(data-component="quiz")

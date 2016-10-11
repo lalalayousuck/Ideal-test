@@ -1,0 +1,23 @@
+.p-header {
+  height: 75px;
+  box-shadow: 0 2px 5px #f4f4f4;
+}
+
+.p-header_logo,
+.p-header_link {
+  float: left;
+  margin-right: 15px;
+  line-height: 85px;
+}
+
+.br {
+  height: 20px;
+}
+
+.p-header_logo {
+  margin: 0 25px 0 0;
+}
+
+.p-header_link a:hover {
+  color: #3ea971;
+}

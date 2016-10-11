@@ -1,0 +1,108 @@
+$sprite: (
+	btn-restart: (
+		offset-x: -93px,
+		offset-y: -55px,
+		width: 12px,
+		height: 14px,
+	),
+	favicom: (
+		offset-x: -114px,
+		offset-y: -48px,
+		width: 16px,
+		height: 16px,
+	),
+	ideal_logo: (
+		offset-x: 0px,
+		offset-y: 0px,
+		width: 82px,
+		height: 49px,
+	),
+	ideal_social__fb: (
+		offset-x: -30px,
+		offset-y: -111px,
+		width: 7px,
+		height: 16px,
+	),
+	ideal_social__inst: (
+		offset-x: -114px,
+		offset-y: -70px,
+		width: 14px,
+		height: 14px,
+	),
+	ideal_social__vk: (
+		offset-x: -88px,
+		offset-y: -38px,
+		width: 15px,
+		height: 8px,
+	),
+	ideal_social__web: (
+		offset-x: 0px,
+		offset-y: -93px,
+		width: 33px,
+		height: 12px,
+	),
+	quiz-duration: (
+		offset-x: -58px,
+		offset-y: -55px,
+		width: 29px,
+		height: 16px,
+	),
+	quiz-length: (
+		offset-x: -114px,
+		offset-y: -26px,
+		width: 16px,
+		height: 16px,
+	),
+	share-btn-fb: (
+		offset-x: -16px,
+		offset-y: -111px,
+		width: 8px,
+		height: 16px,
+	),
+	share-btn-fb2x: (
+		offset-x: 0px,
+		offset-y: -55px,
+		width: 16px,
+		height: 32px,
+	),
+	share-btn-ok: (
+		offset-x: 0px,
+		offset-y: -111px,
+		width: 10px,
+		height: 16px,
+	),
+	share-btn-ok2x: (
+		offset-x: -88px,
+		offset-y: 0px,
+		width: 20px,
+		height: 32px,
+	),
+	share-btn-tw: (
+		offset-x: -39px,
+		offset-y: -93px,
+		width: 12px,
+		height: 10px,
+	),
+	share-btn-tw2x: (
+		offset-x: -114px,
+		offset-y: 0px,
+		width: 24px,
+		height: 20px,
+	),
+	share-btn-vk: (
+		offset-x: -22px,
+		offset-y: -77px,
+		width: 15px,
+		height: 8px,
+	),
+	share-btn-vk2x: (
+		offset-x: -22px,
+		offset-y: -55px,
+		width: 30px,
+		height: 16px,
+	),
+);
+
+$spritesheet-width: 138px;
+$spritesheet-height: 127px;
+$spritesheet-image: "sprite.png";
