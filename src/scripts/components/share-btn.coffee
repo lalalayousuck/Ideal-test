@@ -28,7 +28,7 @@ Component.define 'shareBtn',
 
     if type == 'fb'
       params =
-        app_id: 239854476109563
+        app_id: 253174978169120
         display: 'popup'
         link: url
         redirect_uri: redirectUrl

@@ -109,41 +109,41 @@ gulp.task('templates', function() {
 });
 
 
-// gulp.task('deploy', function() {
-//   runSequence('clean', 'build', 'productionJS', 'productionCSS', 'productionIMG', 'gzip', function() {
-
-//     ['app1.improvemedia.ru', 'app2.improvemedia.ru'].forEach(function(host) {
-//       var gulpSSH = new GulpSSH({
-//         ignoreErrors: false,
-//         sshConfig: {
-//           host: host,
-//           username: 'promo_km',
-//           privateKey: fs.readFileSync('/Users/headonfire/headonfire/.ssh/id_rsa')
-//         }
-//       })
-
-//     //   gulp.src('./build/**')
-//     //     .pipe(gulpSSH.dest('/srv/ideal.kitchenmag.ru'))
-//     // })
-
-//   })
-// })
 gulp.task('deploy', function() {
-  var gulpSSH = new GulpSSH({
-    ignoreErrors: false,
-    sshConfig: {
-      host: 'hw01.improvemedia.ru',
-      port: 2233,
-      username: 'kitchenmag',
-      privateKey: fs.readFileSync('/Users/headonfire/headonfire/.ssh/id_rsa')
-    }
-  })
-
   runSequence('clean', 'build', 'productionJS', 'productionCSS', 'productionIMG', 'gzip', function() {
-    gulp.src('./build/**')
-      .pipe(gulpSSH.dest('/srv/promostaging.kitchenmag.ru'))
+
+    ['app1.improvemedia.ru', 'app2.improvemedia.ru'].forEach(function(host) {
+      var gulpSSH = new GulpSSH({
+        ignoreErrors: false,
+        sshConfig: {
+          host: host,
+          username: 'promo_km',
+          privateKey: fs.readFileSync('/Users/headonfire/headonfire/.ssh/id_rsa')
+        }
+      })
+
+      gulp.src('./build/**')
+        .pipe(gulpSSH.dest('/srv/ideal.kitchenmag.ru'))
+    })
+
   })
 })
+// gulp.task('deploy', function() {
+//   var gulpSSH = new GulpSSH({
+//     ignoreErrors: false,
+//     sshConfig: {
+//       host: 'hw01.improvemedia.ru',
+//       port: 2233,
+//       username: 'kitchenmag',
+//       privateKey: fs.readFileSync('/Users/headonfire/headonfire/.ssh/id_rsa')
+//     }
+//   })
+
+//   runSequence('clean', 'build', 'productionJS', 'productionCSS', 'productionIMG', 'gzip', function() {
+//     gulp.src('./build/**')
+//       .pipe(gulpSSH.dest('/srv/promostaging.kitchenmag.ru'))
+//   })
+// })
 
 
 gulp.task('productionJS', function() {

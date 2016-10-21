@@ -52,7 +52,6 @@ body {
   margin-top: 25px;
   padding-bottom: 50px;
   min-height: 620px;
-  text-align: center;
   background-image: url("http://cdn.kitchenmag.ru/uploads/upload/file/1/olive-2.jpg");
   background-position-x: center;
   background-position-y: 86px;
@@ -64,8 +63,8 @@ body {
   }
 }
 
-.p-hero_container {
-  width: 960px;
+.p-hero-container {
+  width: 1080px;
   margin: 0 auto;
 }
 
@@ -184,7 +183,7 @@ body {
 }
 
 @media all and (max-width: 960px) {
-  .p-hero_container {
+  .p-hero-container {
     width: 100%;
   }
 
@@ -194,7 +193,7 @@ body {
 }
 
 @media all and (max-width: 736px) {
-  .p-hero_container {
+  .p-hero-container {
     width: 100%;
     padding: 0 10px;
   }
@@ -204,8 +203,41 @@ body {
     margin-left: 0;
   }
 
+  .quiz_desc {
+    font-size: 15px;
+  }
+
   .p-header_logo {
     width: 40%;
+  }
+
+  .quiz-question_number {
+    top: 25px;
+    right: 15px;
+  }
+
+  .quiz {
+    margin-top: 0px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .quiz-question {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .quiz_desc-result {
+    font-size: 20px;
+  }
+
+  .quiz-social {
+    padding: 15px 0;
+  }
+
+  img.quiz-banner {
+    display: none;
   }
 
   .p-hero_content .p-hero-bottle {
@@ -218,5 +250,41 @@ body {
 
   .p-hero_text {
     padding-right: 100px;
+  }
+
+  .quiz-agreement {
+    li {
+      font-size: 10px;
+    }
+  }
+}
+
+.quiz-banner {
+  display: inline-block;
+  margin-left: 50px;
+  vertical-align: top;
+}
+
+// Дополнительное соглашение
+
+.quiz-agreement {
+  max-height: 350px;
+  overflow: scroll;
+  margin-top: 25px;
+  padding: 15px 10px;
+  background-color: white;
+
+  .quiz-agreement_title,
+  .quiz-agreement_desc {
+    font-weight: 600;
+  }
+
+  .quiz-agreement_desc {
+    margin-bottom: 30px;
+  }
+
+  li {
+    text-align: left;
+    margin-top: 5px;
   }
 }

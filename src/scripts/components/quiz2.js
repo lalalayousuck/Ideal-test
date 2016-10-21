@@ -4,18 +4,23 @@ var data = require('../data/quiz');
 Component.define('quiz', {
 
   events: {
-    'click on %start': 'start',
+    'click on %start': 'obey',
+    'click on %agree': 'start',
     'click on %answer': 'pickAnswer',
     'click on %next': 'next'
   },
 
   init: function() {
-    console.log('hommie');
     this.quiz = data.quiz;
     this.questions = data.questions;
     this.result = data.results;
+    this.agreement = data.agreement;
 
     this.$block.html(Templates.quiz(this.quiz));
+  },
+
+  obey: function() {
+    this.$block.html(Templates.agreement(this.agreement));
   },
 
   start: function() {
@@ -50,6 +55,7 @@ Component.define('quiz', {
         if (this.quizResult > this.result[i].min && this.quizResult < this.result[i].max) {
           this.$block.html(Templates.result(this.result[i]));
           Component.vitalize();
+          ga('send', 'event', 'quiz', 'finished', 'finished');
         }
       }
     } else {

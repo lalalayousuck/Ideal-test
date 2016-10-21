@@ -1,6 +1,7 @@
 .quiz-question {
   position: relative;
-  margin: 50px auto 0;
+  display: inline-block;
+  margin: 0;
   max-width: 700px;
   height: auto;
   min-height: 400px;
@@ -8,7 +9,7 @@
   padding: 25px 28px 33px;
   text-align: left;
   background-color: white;
-  color: #666666;
+  color: #000;
 
   img {
     display: block;
@@ -70,9 +71,16 @@
   font-size: 20px;
 }
 
+@media screen and (min-width: 1000px) {
+  .quiz-question {
+    min-width: 700px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .quiz-question_title {
-    padding-right: 50px;
+    padding-right: 40px;
+    font-size: 17px;
   }
 
   .quiz-question img {

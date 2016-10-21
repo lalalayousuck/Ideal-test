@@ -1,23 +1,36 @@
 .quiz {
   position: relative;
-  margin: 87px auto 0;
+  margin: 87px 0 0;
   max-width: 700px;
   height: auto;
   border: 1px solid #e8e8e8;
   padding: 25px 28px 33px;
-  text-align: center;
   background-color: white;
-  color: #666666;
+  color: #000;
   background-image: url('../assets/pic3.jpg');
   background-position-x: center; 
+  text-align: center;
 
 
   @include bp(768) {
-    margin: 142px auto 0;
+    margin: 0;
     text-align: center;
   }
 }
 
+.quiz-container-wrapper {
+  display: table;
+  vertical-align: top;
+}
+
+.quiz-container {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.component {
+  display: inline-block;
+}
 
 .answers_item:nth-child(1),
 .quiz_title,
