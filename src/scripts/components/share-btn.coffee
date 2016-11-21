@@ -30,17 +30,17 @@ Component.define 'shareBtn',
       params =
         app_id: 253174978169120
         display: 'popup'
-        link: url
-        redirect_uri: redirectUrl
+        link: 'http://ideal.kitchenmag.ru/'
+        redirect_uri: 'http://ideal.kitchenmag.ru/'
 
-      params.caption     = title if title
-      params.picture     = image if image
-      params.description = description if description
+      params.caption     = 'Взгляд в корзинку: как хорошо вы выбираете продукты питания?'
+      params.picture     = 'http://ideal.kitchenmag.ru/assets/q3.jpg'
+      params.description = description
 
       url = 'https://www.facebook.com/dialog/feed?' + $.param(params)
 
     if type == 'vk'
-      url = "http://vk.com/share.php?" + $.param(url: url, title: title.slice(0, 100), description: description.slice(0, 80), image: image)
+      url = "http://vk.com/share.php?" + $.param(url: 'http://ideal.kitchenmag.ru/', title: title.slice(0, 100), description: description, image: 'http://ideal.kitchenmag.ru/assets/q3.jpg')
 
     if type == 'ok'
       url = "https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl=#{ url }"

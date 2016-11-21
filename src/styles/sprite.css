@@ -1,15 +1,9 @@
 $sprite: (
 	btn-restart: (
-		offset-x: -93px,
-		offset-y: -55px,
+		offset-x: -114px,
+		offset-y: -68px,
 		width: 12px,
 		height: 14px,
-	),
-	favicom: (
-		offset-x: -114px,
-		offset-y: -48px,
-		width: 16px,
-		height: 16px,
 	),
 	ideal_logo: (
 		offset-x: 0px,
@@ -18,14 +12,14 @@ $sprite: (
 		height: 49px,
 	),
 	ideal_social__fb: (
-		offset-x: -30px,
+		offset-x: -14px,
 		offset-y: -111px,
 		width: 7px,
 		height: 16px,
 	),
 	ideal_social__inst: (
 		offset-x: -114px,
-		offset-y: -70px,
+		offset-y: -48px,
 		width: 14px,
 		height: 14px,
 	),
@@ -54,7 +48,7 @@ $sprite: (
 		height: 16px,
 	),
 	share-btn-fb: (
-		offset-x: -16px,
+		offset-x: 0px,
 		offset-y: -111px,
 		width: 8px,
 		height: 16px,
@@ -66,8 +60,8 @@ $sprite: (
 		height: 32px,
 	),
 	share-btn-ok: (
-		offset-x: 0px,
-		offset-y: -111px,
+		offset-x: -93px,
+		offset-y: -55px,
 		width: 10px,
 		height: 16px,
 	),
